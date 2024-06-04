@@ -39,6 +39,7 @@ requirements:
     - libboost-devel 
     - cmake 
     - make
+    - pygsl
 
 test:
   imports:
