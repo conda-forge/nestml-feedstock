@@ -4,3 +4,8 @@ github:
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
+azure:
+    force: False
+    store_build_artifacts: true
+    free_disk_space: False
+    max_parallel: 25
