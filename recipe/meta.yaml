@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   entry_points:
     - nestml = pynestml.frontend.pynestml_frontend:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3 
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy >=1.8.2
     - scipy
     - antlr4-python3-runtime ==4.13.1
@@ -47,6 +47,7 @@ test:
     - nestml --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/nest/nestml
