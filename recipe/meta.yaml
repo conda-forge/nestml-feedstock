@@ -1,5 +1,6 @@
 {% set name = "nestml" %}
 {% set version = "8.0.0" %}
+{% set python_min = "3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -18,14 +19,14 @@ build:
 
 requirements:
   host:
-    - python >=3 
+    - python {{ python_min }} 
     - pip
     - setuptools
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy >=1.8.2
     - scipy
-    - antlr4-python3-runtime ==4.13.1
+    - antlr4-python3-runtime ==4.13.2
     - setuptools
     - jinja2 >=2.10
     - typing 
@@ -47,6 +48,7 @@ test:
   commands:
     - nestml --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
