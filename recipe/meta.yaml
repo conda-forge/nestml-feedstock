@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }} 
+    - python {{ python_min }},<3.12
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.12
     - numpy >=1.8.2
     - scipy
     - antlr4-python3-runtime ==4.13.2
@@ -48,7 +48,7 @@ test:
   commands:
     - nestml --help
   requires:
-    - python {{ python_min }}
+    - python {{ python_min }},<3.12
     - pip
 
 about:
