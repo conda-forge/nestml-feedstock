@@ -29,6 +29,8 @@ requirements:
     - antlr4-python3-runtime ==4.13.1
     - jinja2 >=2.10
     - typing 
+    - setuptools
+    - pip
     - astropy-base
     - odetoolbox >=2.4
     - ipython 
