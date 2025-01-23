@@ -1,5 +1,6 @@
 {% set name = "nestml" %}
 {% set version = "8.0.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -11,24 +12,26 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   entry_points:
     - nestml = pynestml.frontend.pynestml_frontend:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3 
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy >=1.8.2
     - scipy
     - antlr4-python3-runtime ==4.13.1
-    - setuptools
     - jinja2 >=2.10
     - typing 
-    - astropy
+    - setuptools
+    - pip
+    - astropy-base
     - odetoolbox >=2.4
     - ipython 
     - cxx-compiler 
@@ -47,6 +50,7 @@ test:
     - nestml --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/nest/nestml
