@@ -1,5 +1,5 @@
 {% set name = "nestml" %}
-{% set version = "8.0.0" %}
+{% set version = "8.0.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/nest/nestml/archive/v{{ version }}.tar.gz
-  sha256: 3736e5bf29efacb7747e343bb040ff2ea36168837db00fae17775ecfa707c70a
+  sha256: 77424d03451393b0dbcecd0d5458ba4952d74c34d3dd6363842d6747af52b4e7
 
 build:
   noarch: python
-  number: 3
+  number: 0
   entry_points:
     - nestml = pynestml.frontend.pynestml_frontend:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -26,20 +26,20 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.8.2
     - scipy
-    - antlr4-python3-runtime ==4.13.1
+    - antlr4-python3-runtime ==4.13.2
     - jinja2 >=2.10
-    - typing 
+    - typing
     - setuptools
     - pip
     - astropy-base
-    - odetoolbox >=2.4
-    - ipython 
-    - cxx-compiler 
-    - pyqt 
-    - wxpython 
-    - libboost-python-devel 
-    - libboost-devel 
-    - cmake 
+    - odetoolbox >=2.5.8
+    - ipython
+    - cxx-compiler
+    - pyqt
+    - wxpython
+    - libboost-python-devel
+    - libboost-devel
+    - cmake
     - make
     - pygsl
 
