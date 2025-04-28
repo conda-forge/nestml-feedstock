@@ -26,13 +26,13 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.8.2
     - scipy
-    - antlr4-python3-runtime ==4.13.1
+    - antlr4-python3-runtime ==4.13.2
     - jinja2 >=2.10
     - typing
     - setuptools
     - pip
     - astropy-base
-    - odetoolbox >=2.4
+    - odetoolbox >=2.5.8
     - ipython
     - cxx-compiler
     - pyqt
