@@ -32,7 +32,7 @@ requirements:
     - setuptools
     - pip
     - astropy-base
-    - odetoolbox >=2.5.8
+    - odetoolbox >=2.5.9
     - ipython
     - cxx-compiler
     - pyqt
